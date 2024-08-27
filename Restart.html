@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kerala Tourism Reviews</title>
+    <link href="Restart.css" rel="stylesheet"> 
+</head>
+<body>
+    <h1>Share your review here !</h1>
+    <form onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>Full name</td>
+                <td><input type="text" name="fname" id="fname" placeholder="First Name" required></td>
+            </tr>
+            <tr>
+                
+                <td>Email</td>
+                <td><input type="email" name="email" id="email" placeholder="Email" required></td>
+            </tr>
+            <tr>
+                <td>Contact Number</td>
+                <td><input type="tel" name="contact" id="contact" placeholder="Contact Number" required></td>
+            </tr>
+             
+            <tr>
+                <td>Rating:</td>
+                <td>
+                    <select id="rating" name="rating" required>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+           <td> <div class="reviewer-image">
+                <img id="reviewerImg" src="" alt="Upload your  Image">
+                <input type="file" id="imageInput" accept="image/*">
+            </div> </td>
+
+        </tr>
+            <!-- Modal Button -->
+    <button id="feedbackButton">Give Feedback</button>
+    
+    <!-- Modal -->
+   <tr> 
+    
+    <td><div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeButton">&times;</span>
+            <h2>Leave Your Review</h2>
+            <textarea id="reviewTextarea" rows="4" placeholder="Write your review here..."></textarea>
+            
+        </div> </td>
+    </tr>
+    </div>
+            
+            
+            <tr>
+                <td></td>
+                <td><button type="submit">Submit Review</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <!-- Success message box -->
+    <div class="success-message" id="successMessage">
+        Your details has been successfuly submited.thanks!
+    </div>
+
+    <script>
+        function validateForm() {
+            // Form validation as before
+            // ...
+
+            // On successful form submission, show the success message
+            showSuccessMessage();
+
+            // Prevent form from submitting to a server for this example
+            return false;
+        }
+
+        function showSuccessMessage() {
+            var successMessage = document.getElementById("successMessage");
+            successMessage.style.display = "block";
+
+            // Hide the success message after 3 seconds (3000 milliseconds)
+            setTimeout(function() {
+                successMessage.style.display = "none";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

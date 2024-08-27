@@ -1,0 +1,96 @@
+body {
+    background-image: url('https://img.freepik.com/premium-vector/online-travel-ticket-store-through-transportation-journey-booking-hand-drawn-illustration_2175-10329.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "sans-serif", sans-serif, Arial, sans-serif;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+/* Style for the success message box */
+.success-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #2346e3;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+/* Style for the form inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    padding: 10px;
+    border: 2px solid #10e8f4;
+    border-radius: 10px;
+    width: 300px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style for the book now button */
+button[type="submit"] {
+    padding: 15px 30px;
+    background-color: #10e8f4;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+button[type="submit"]:hover {
+    background-color: #1357d5;
+}
+h1{
+    text-align: center;
+    color: #1357d5;
+}
+/* Styles for checkboxes */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #10e8f4;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #10bde3;
+}
+
+/* Styles for radio buttons */
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #10e8f4;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+input[type="radio"]:checked {
+    background-color: #10cef4;
+}

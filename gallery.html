@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Gallery</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+         * {
+	         font-family: 'Montserrat', sans-serif;
+           }
+            .image-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); 
+                grid-gap: 10px; 
+            }
+            .image-item {
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+            .image-item img {
+                max-width: 100%;
+                height: auto;
+            }
+            @media (min-width: 768px) { 
+            .image-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) { 
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.image-item {
+    animation: fade-in 2s ease-in;
+}
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Gallery of Munnar</h1>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="https://www.keralatourism.org/images/picture/hri/Munnar_1614.jpg" alt="Image 1">
+            </div>
+            <div class="image-item">
+                <img src="https://t4.ftcdn.net/jpg/01/28/57/63/360_F_128576315_ejpjSy7S7fsH275jCDuUtykU1O3B6rUb.jpg" alt="Image 2">
+            </div>
+            <div class="image-item">
+                <img src="https://media.istockphoto.com/id/670688480/photo/green-tea-plantations-munnar-kerala-india.jpg?s=612x612&w=0&k=20&c=b09pbKjviHDfBg4sviMO5Pjwq_KhcpgsMHquKrLQBdU=" alt="Image 3">
+            </div>
+            <div class="image-item">
+                <img src="https://www.keralatourism.org/images/microsites/munnar/idukki-kerala.jpg" alt="Image 4">
+            </div>
+            <div class="image-item">
+                <img src="https://storage.karmagroup.com/assets/karmagroup.com/2022/03/karma-munnar-gallery-page-02.jpg" alt="Image 5">
+            </div>
+            <div class="image-item">
+                <img src="https://relaxinkerala.com/assets/images/gallery/1.jpg" alt="Image 6">
+            </div>
+            
+        </div>
+    </body>
+</html>

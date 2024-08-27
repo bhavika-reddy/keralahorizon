@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;1,700&display=swap');
+
+.{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 70px;
+    background:#3498db;
+}
+
+.container{
+    position: relative;
+    perspective: 1000px;
+}
+
+.container  .slide-container .slide{
+    border-radius: 5px;
+    background:#fff;
+    box-shadow:0 5px 10px  #3337;
+    width:450px;
+    padding:20px;
+    margin:10px;
+    position: relative;
+    transform - style: preserve-3d;
+    animation:slide .4s linear;
+
+}
+
+@keyframes slide{
+    0%{
+        transform: rotatex(180deg);
+    }
+}
+
+.container .slide-container .slide >  *{
+    animation: slideContent .2s linear .4s backwards;
+}
+
+@keyframes slideContent{
+    0%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+}
+.container  .slide-container  .slide .icon{
+    position: absolute;
+    top:10px; right:15px;
+    font-size: 90px;
+    colour:#3498db;
+}
+
+.container  .slde-container  .slide .user{
+    display: flex;
+    align-items: center;
+
+}
+
+.container .slide-container  .slide  img{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.container  .slide-container .slide .user .user-info h3{
+    color:#333;
+    font-size: 20px;
+
+}
+
+.container  .slide-container .slide .user .user-info .stars i{
+    color:#3498db;
+    font-size: 15px;
+    
+}
+
+.container  .slide-container .slide .text{
+    color:#3498db;
+    font-size: 14px;
+    padding-top: 15px;
+    font-style: italic;
+
+
+    
+}
+
+.container  .slide-container{
+    display:none;
+}
+
+.container  .slide-container.active{
+    display:block;
+}
+
+.container #next,
+.container #prev{
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    height:50px;
+    width:50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    background:#fff;
+    color:#333;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px  #3337;
+
+
+}
+
+.container #next{
+    right: -70px;
+}
+
+.container #prev{
+    left: -70px;
+}
+
+.container #next:hover,
+.container #prev:hover{
+
+    background:#333;
+    color: #fff;
+}
+
+/* Css style for add your review button */
+
+body {
+    background-image: url(' https://kelpls.co.nz/cdn/shop/products/141_200x200.jpg?v=1512615452');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    font-family: "algerian", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Arial, sans-serif;
+}
+
+.booking-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: palevioletred ;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Overlay for the booking popup */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+}
+
+/* Booking popup box */
+.booking-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+

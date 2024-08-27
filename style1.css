@@ -1,0 +1,205 @@
+html{
+	scroll-behavior: smooth;
+}
+
+body, h1, h2, h3, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,p,ul,h4
+{
+    color:#ccc;
+}
+.container {
+	width: 80%;
+	margin: 0 auto;
+	background-image: linear-gradient(rgb(8, 3, 85), rgb(47, 7, 80));
+}
+h1
+{
+	background-image: linear-gradient(to right, rgb(47, 7, 80),black);
+}
+.menu {
+	background: #320361;
+}
+
+.menu ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+.menu ul li {
+	margin-right: 10px;
+}
+
+.menu ul li a {
+	color: rgba(255, 255, 255, 0.745);
+	text-decoration: none;
+	padding: 5px;
+}
+
+.menu ul li a:hover {
+	background: #046da6;
+	color: #ffffff;
+	border-radius: 3px;
+}
+
+.banner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 100px 50px;
+    background-image:url("https://media.istockphoto.com/id/1281517761/photo/bright-stars-and-milky-way-at-night.jpg?s=612x612&w=0&k=20&c=7shsxGLjxESVR-86oqX7AZPaPap8zlTdpPn2zlRrPyc=");
+}
+
+.about-text {
+	color: white;
+}
+
+.banner h1, .banner h2, .banner p {
+	margin-bottom: 10px;
+}
+
+.picture img {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 70%;
+}
+
+.social-icons {
+	text-align: center;
+	padding: 20px;
+}
+
+.social-icons ul {
+	list-style-type: none;
+}
+
+.social-icons ul li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.social-icons ul li a {
+	color: #fcf9f9;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.about, .education, .experience, .skills, .achievements, .contact {
+	padding: 50px;
+	background-image:url("https://media.istockphoto.com/id/92893866/photo/space-stars-texture.jpg?s=612x612&w=0&k=20&c=ixEfktRhm0JacTO8yTkU1ExlceBqIZ7PfsHAyWmxG20=");
+	color: #333;
+	margin-bottom: 30px;
+}
+
+.about h2, .education h2, .experience h2, .skills h2, .achievements h2, .contact h2 {
+	margin-bottom: 20px;
+}
+
+.progress-bar {
+	width: 80%;
+	height: 30px;
+	background: #000000;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.progress {
+	height: 100%;
+	background: #2f024de9;
+}
+
+.progress-label {
+	margin-top: 20px;
+	color: #4f6af2;
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 100%;
+	}
+
+	.banner {
+		
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.banner .about-text {
+		margin-bottom: 30px;
+	}
+
+	.picture img {
+		width: 200px;
+		height: 200px;
+		margin-bottom: 30px;
+	}
+
+	.about, .education, .experience, .skills, .achievements, .contact {
+		padding: 20px;
+	}
+}
+.timeline
+{
+	position:relative;
+	max-width:1200px;
+	margin :100px auto;
+}
+.con
+{
+	padding: 10px 50px;
+	position:relative;
+	width: 500px;
+	background:#250348;
+	color: #11032a;
+}
+.tb
+{
+	padding :20px;
+	background: #000000;
+	position:relative;
+	border-radius:6px;
+	font-size:12px;
+	text-align: center;
+}
+.left-container
+{
+	left:0;
+}
+.right-container
+{
+	left:50%;
+}
+.btn
+{
+	font-family: "Roboto",sans-serif;
+	font-size: 18px;
+	font-weight: Bold;
+	background: #042f5ee9;
+	width:fit-content;
+	padding:20px;
+	text-align: center;
+	color: #ffffff;
+	border-radius: 10px;
+	cursor:pointer;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	-webkit-transition-duration:0.3s;
+	transition-duration:0.3s;
+	-webkit-transition-property:box-shadow,transform;
+	transition-property:box-shadow,transform;
+
+}
+.btn:hover, .btn:focus, .bth:active{
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	background-color: rgb(133, 7, 250);
+}
+.contact
+{
+	text-align: center;
+}

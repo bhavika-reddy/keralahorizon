@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- font awesome cdn link-->
+     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <!-- custom css file link-->
+     <link rel ="stylesheet" href="Review.css">
+
+     <title>Main Page</title>
+     <link href="explore.css" rel="stylesheet">
+     <script src="Restart.js"></script>
+
+
+</head>
+<body>
+
+    <div class="booking-button" onclick="openBookingPopup()"> Add your Review</div>
+
+    <!-- Overlay for the booking popup -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Booking popup box -->
+    <div class="booking-popup" id="bookingPopup">
+        <span class="close-button" onclick="closeBookingPopup()">&#x2716;</span>
+        <iframe src="Restart.html" width="600" height="550" frameborder="0"></iframe>
+    </div>
+
+    
+    <div class = "container">
+        <div class = "slide-container active">
+            <div class = "slide">
+                <i class="fas.fa-quote-right.icon"></i>
+            <div class = "user">
+                <img src = "https://wallpapercave.com/wp/wp11981337.jpg" alt="">
+                <div class = "user-info">
+                    <h3>Lily</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+            </div>
+            <p class="text">I stumbled upon this website while planning a last-minute getaway, and I couldn't have been luckier. The user interface was refreshingly clean and clutter-free, making it incredibly easy to explore options.</p>
+        </div>
+    </div>
+
+    <div class = "slide-container">
+        <div class = "slide">
+            <i class="fas.fa-quote-right.icon"></i>
+        <div class = "user">
+            <img src = " https://i.pinimg.com/550x/8d/52/c5/8d52c5c35382908832ffedb21c1e63b0.jpg" alt="">
+            <div class = "user-info">
+                <h3>victoria</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+        <p class="text">This destination is pure magic. The white sandy beaches, crystal-clear waters, and stunning sunsets were straight out of a postcard.</p>
+    </div>
+</div>
+
+<div class = "slide-container">
+    <div class = "slide">
+        <i class="fas.fa-quote-right.icon"></i>
+    <div class = "user">
+        <img src = "https://i.pinimg.com/736x/14/95/8b/14958babd2f2c6ccd22a71d3b13f0166.jpg" alt="">
+        <div class = "user-info">
+            <h3>sophia</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+
+    </div>
+    <p class="text">The lush forests, chirping birds, and fresh mountain air were a nature lover's paradise. This trip recharged my soul and reminded me of the beauty of our planet."
+
+    </p>
+</div>
+</div>
+
+    <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+    <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    </div>
+    <script>
+        let slides = document.querySelectorAll('.slide-container');
+        let index = 0;
+
+        function next(){
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        function prev(){
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+    </script>
+    </body>
+    </html>

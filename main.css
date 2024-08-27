@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap');
+
+
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:#289919;
+    color:#000000;
+}
+
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-padding-top:6rem;
+    scroll-behavior: smooth;
+}
+
+a{
+    color:#ffffff;
+}
+
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* Align the content to the right */
+    align-items: flex-start; /* Align the content to the top */
+    flex-wrap: wrap;
+    gap: 20px;
+    background-attachment: fixed;
+    
+}
+
+.image {
+    position: relative;
+    width: 25vw; /* Make the image 1/4th of the viewport width */
+    max-width: 300px; /* Add max-width to prevent it from becoming too large */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.image__overlay>* {
+    transform: translateY(0);
+    transition: transform 0.25s;
+}
+
+.image__description {
+    display: none;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
+}
+
+.image:hover .image__description {
+    display: block; /* Show the description on hover */
+}
+
+.image__title {
+    font-size: 3.5em;
+    font-weight: bold;
+    font-family: 'Geologica', sans-serif;
+}
+.image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .image {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .district {
+            text-align: center;
+            background-color: rgb(255, 255, 251);
+            padding: 10px;
+            border: 7px solid rgb(241, 241, 6);
+          }
+
+        .district h2{
+            color:#000000;
+            font-size: 50px;
+        }
+        .image__img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1; /* Set opacity to 1 to make the overlay always visible */
+            transition: opacity 0.25s;
+            border-radius: 50%;
+        }
+
+        .image__title {
+            font-size: 1.5em;
+            font-weight: bold;
+            pointer-events: none; /* Prevent title from blocking click events on the image */
+        }
+
+        .image__description {
+            font-size: 0.9em;
+            text-align: center;
+            padding: 5px;
+        }
+        .right_div h1{
+            text-align: center;
+        }
+        .right_div {
+            width: 80%;
+            background-repeat: repeat;
+            background-size: 100%;
+            background-position: center;
+            padding: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: fit-content;
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            }
+        .right_div h1{
+            background-image: linear-gradient(to right, rgb(69, 69, 67), rgb(183, 180, 180));
+        }
+
+        
+        .left_div {
+            width: 20%;
+            background-repeat: repeat;
+            background-size: 100%;
+            background-position: center;
+            background-color:#ffffff ;
+            padding: 20px;
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-image: linear-gradient(to right, rgb(131, 129, 129), rgb(255, 255, 255));
+            top: 0;
+            left: 0;
+            position:fixed;
+            }
+            .video-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                object-fit: cover;
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    padding:5px 10px;
+                    color: white;
+                    font-size: 17px;
+                    cursor: pointer;
+                    outline: none;
+                    }
+
+                    /* Add curvy sides using border-radius */
+                    .curvy-button {
+                    background-color: #12481c;
+                    border-radius: 10px;
+                    transition: background-color 0.3s ease;
+                    }
+
+                    /* Change the color on hover */
+                    .curvy-button:hover {
+                    background-color: #bcaf17;
+                    }
+                    a:visited {
+                        color: white; 
+                        }
+                    h1{
+                        color: #000000;
+                    }
+
+                    @media (max-width: 1024px) {
+                       
+                        .right_div {
+                            width: 100%;
+                            padding: 10px;
+                            position: static;
+                        }
+                        .left_div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            padding: 10px;
+                            position: static;
+                        }
+                        .image-container {
+                            justify-content: center;
+                        }
+                        .image {
+                            width: 40vw; /* Change the width for better fit on smaller screens */
+                        }
+                    }
+                    
+                    /* CSS for mobile devices */
+                    @media (max-width: 768px) {
+                        
+                        .right_div {
+                            width: 100%;
+                            padding: 10px;
+                        }
+                        .left_div {
+                            padding: 5px;
+                        }
+                        .image-container {
+                            justify-content: center;
+                            gap: 10px; /* Reduce the gap between images for better fit on smaller screens */
+                        }
+                        .image {
+                            width: 80vw; /* Change the width for better fit on smaller screens */
+                        }
+                        .image__title {
+                            font-size: 1.2em;
+                        }
+                    }
+                    
+                    /* CSS for extra small devices (e.g., phones in landscape mode) */
+                    @media (max-width: 480px) {
+                       
+                        .right_div {
+                            padding: 5px;
+                        }
+                        .image-container {
+                            gap: 5px; /* Further reduce the gap between images for better fit on smaller screens */
+                        }
+                        .image__title {
+                            font-size: 1em;
+                        }
+                        .image__description {
+                            font-size: 0.8em;
+                        }
+                    }
+                   

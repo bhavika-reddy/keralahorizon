@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Malayalam Translator</title>
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+body {
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #translate {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color:#ffc400 ;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        #translate:hover {
+            transform: scale(1.1); 
+            background-color: #000000; 
+        }
+        .head{
+            border: solid 5px #ffc400;
+            align-items: center;
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .total{
+            background-color: #fbeeac;
+            width: 800px;
+            padding: 20px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .output {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .output-inner {
+            border-radius: 5px;
+            background-color: #ffffff;
+            width: 50%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="total">
+    <div class="head">
+    <h1>Malayalam Translator</h1>
+     </div>
+    <div id="languageSelect">
+        <h2>Select Language</h2>
+        <select id="languageDropdown">
+            <option value="en">English</option>
+            <option value="ml">French</option>
+            <option value="es">Spanish</option>
+        </select>
+    </div>
+    <div>
+        <br>
+    </div>
+    <input type="text" id="inputString" placeholder="Enter text to translate">
+    
+    <button id="translate" onclick="printString()">Translate</button>
+    <div class="output">
+        <div class="output-inner" id="output"></div>
+    </div>
+  </div>
+    <script>
+        function printString() {
+            var inputElement = document.getElementById("inputString");
+            var outputElement = document.getElementById("output");
+            var inputString = inputElement.value.trim(); 
+
+            if (inputString === "hello") { 
+                outputElement.textContent = "നമസ്കാരം - (namaskaram)";
+            }else if(inputString === "thank you")
+            {
+                outputElement.textContent = "നന്ദി - (Nandi)"
+            }
+             else {
+                outputElement.textContent = "Please enter valid string.";
+            }
+        }
+    </script>
+</body>
+</html>

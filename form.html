@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+    <link href="form.css" rel="stylesheet">
+    <script src="book.js"></script>
+</head>
+<body>
+    <div class="booking-button" onclick="openBookingPopup()">Book Now</div>
+
+    <!-- Overlay for the booking popup -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Booking popup box -->
+    <div class="booking-popup" id="bookingPopup">
+        <span class="close-button" onclick="closeBookingPopup()">&#x2716;</span>
+        <iframe src="book.html" width="600" height="550" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

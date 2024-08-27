@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Tea Gardens</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+         * {
+	         font-family: 'Montserrat', sans-serif;
+           }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        @media (max-width: 768px) {
+            
+            .container {
+               align-items: center;
+               display:flex;
+               flex-direction: column;
+               gap: 2em;
+            }
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+        }
+        .garden{
+            margin-top:10px;
+            margin-left: 100px;
+            margin-right:100px;
+            border-radius: 10px;
+            border: solid  #ffc400 5px;
+        }
+
+        .content {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .content h2 {
+            margin-bottom: 10px;
+            color: #333333;
+        }
+
+        .content img {
+            max-width: 100%;
+            border-radius: 6px;
+            margin: 20px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content p {
+            color: #666666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="garden">
+    <h1 style="text-align: center;">Top most Tea Gardens in Munnar</h1>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2>Kolukkumalai Tea Estate</h2>
+            <img src="https://www.clubmahindra.com/blog/media/section_images/banner1920-6c1e6e1c21a9817.webp" alt="Image 1">
+            <p>Located about 35 kms from Munnar, this stunning tea garden is one of the most beautiful tea estates in India, and is rated among the top places for tea production.</p>
+        </div>
+        
+        <div class="content">
+            <h2>Pallivasal Tea Garden </h2>
+            <img src="https://www.holidify.com/images/cmsuploads/compressed/Munnar_%2528Kerala%2529_Tea_Gardens_20190116151814.jpg" alt="Image 2">
+            <p>While there are lakes, and waterfalls in Munnar, visiting the tea estate has its own unique charm. The vast rolling hills brimmed with greenery and the mellow aroma of the tea fills your heart with unimaginable joy.</p>
+        </div>
+        
+        <div class="content">
+            <h2>Lockhart Tea Estate </h2>
+            <img src="https://www.hillpartridgeresort.com/hillpatrideblogin/uploads/destination-box-4.jpg" alt="Image 3">
+            <p>Lockhart Estate is one of the oldest tea gardens in Munnar. It was established by John Von Rosenberg, and his son.</p>
+        </div>
+    </div>
+</body>
+</html>

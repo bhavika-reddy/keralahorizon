@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        star
+    </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://w0.peakpx.com/wallpaper/253/338/HD-wallpaper-yellow-stones-black-grey-nature-stone.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid rgb(255, 217, 0);
+        }
+
+        .star-rating {
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        .star {
+            color: rgb(233, 229, 229);
+        }
+
+        .star:hover,
+        .star.active {
+            color: rgb(255, 217, 0);
+            transform: scale(1.2);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .review-heading {
+            font-size: 24px;
+            background-color: rgb(255, 217, 0);
+            padding: 10px;
+            margin-top: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .review-textbox {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+        
+        .place-name {
+            width: 100%;
+            margin-top: 10px;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        .submit-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .submit {
+            background-color: rgb(255, 217, 0);
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
+        }
+
+        .submit:hover {
+            background-color: gray;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(255, 217, 0);
+            padding: 20px;
+            border: 2px solid gray;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 999;
+            display: none;
+        }
+
+        .popup-content {
+            color: white;
+            font-size: 24px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            .review-heading {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="review-heading">
+            <h2>Rate the place</h2>
+        </div>
+        <textarea id="placeName" class="place-name" placeholder="Enter the place name..."></textarea>
+        <textarea id="reviewText" class="review-textbox" placeholder="Write your review here..."></textarea>
+
+        <div class="star-rating">
+            <span class="star" data-rating="1">&#9733;</span>
+            <span class="star" data-rating="2">&#9733;</span>
+            <span class="star" data-rating="3">&#9733;</span>
+            <span class="star" data-rating="4">&#9733;</span>
+            <span class="star" data-rating="5">&#9733;</span>
+        </div>
+        <div class="submit-container">
+            <button class="submit" onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+    <div class="popup" id="responsePopup">
+        <div class="popup-content">
+            Response added
+        </div>
+    </div>
+    <div class="popup" id="fillFieldsPopup">
+        <div class="popup-content">
+            Please fill in all fields
+        </div>
+    </div>
+    <script>
+        function showPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = "block";
+            setTimeout(() => {
+                popup.style.display = "none";
+            }, 2000); // Hide the popup after 2 seconds
+        }
+
+        function submitForm() {
+            const placeName = document.getElementById("placeName").value;
+            const reviewText = document.getElementById("reviewText").value;
+            const stars = document.querySelectorAll(".star.active");
+
+            if (placeName === "" || reviewText === "" || stars.length === 0) {
+                showPopup("fillFieldsPopup");
+            } else {
+                showPopup("responsePopup");
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".star");
+
+            stars.forEach((star) => {
+                star.addEventListener("click", () => {
+                    const rating = star.getAttribute("data-rating");
+                    updateStars(rating);
+                });
+            });
+
+            function updateStars(selectedRating) {
+                stars.forEach((star) => {
+                    const starRating = star.getAttribute("data-rating");
+                    if (starRating <= selectedRating) {
+                        star.classList.add("active");
+                    } else {
+                        star.classList.remove("active");
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
